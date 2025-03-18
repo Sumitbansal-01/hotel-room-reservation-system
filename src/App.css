@@ -2,37 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  margin-top: 10vh;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+.hotel{
+  height: auto;
+  width: auto;
+  margin-top: 5vh;
+  display: flex;
+}
+
+.lift{
+  width: 20%;
+  border: 1px solid black;
+  margin-right: 5%;
+  margin-top: 2vh;
+}
+
+.floors{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.floor{
+  display: flex;
+  margin-top: 2vh;
+}
+
+.room{
+  height: 5vh;
+  width: 8vh;
+  margin-right: 2vh;
+  border: 1px solid green;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center; 
 }
