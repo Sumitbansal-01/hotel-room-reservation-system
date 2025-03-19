@@ -1,21 +1,14 @@
-import config from "../config";
 import Floor from './Floor';
 
-export default function Hotel() {
-
-    const getFloors = (totalFloorNumber) =>{
-        const totalFloors = [];
-        for (let i = 1; i <= totalFloorNumber; i++) {
-            totalFloors.push(<Floor key={i} floorNumber={i} totalRooms={i!==totalFloorNumber ? config.Max_Rooms_Per_Floor : config.Total_Rooms % config.Max_Rooms_Per_Floor}/>);
-        }
-        return totalFloors;
-    }
+export default function Hotel(props) {
 
   return (
     <div className='hotel'>
       <div className='lift'></div>
       <div className='floors'>
-        {getFloors(config.Total_Floors)}
+        {props?.hotelArray.map((n,i)=>
+            <Floor key={i} totalRooms={n}/>
+        )}
       </div>
     </div>
   )
